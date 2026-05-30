@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Practice
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:0px;
+            background-color: #f4f4f4;
+
+        }
+        .container {
+           border: 1px solid white;
+            background-color:white;
+            display: flex;
+           
+        }
+            .box {
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+        
+        }
+
+        .flexbox {
+            display: flex;
+            gap: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .position-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .position .position-item {
+            margin-bottom: 20px;
+        }
+
+        .position-item.relative {
+            background-color: #a9dfbf;
+            
+        }
+
+        .position-item.absolute-parent {
+            background-color: #f9e79f;
+        }
+
+        .position-item.sticky {
+            background-color: #aed6f1;
+        }
+
+        .position-item.static {
+            background-color: #f5b7b1;
+        }
+
+        .position-item.fixed-parent {
+            background-color: #d2b4de;
+        }
+
+        .position-item.fixed-child {
+            background-color: #7dcea0;
+            margin-top: 10px;
+        }
+
+
+        .navbar {
+           display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:  15px 20px;
+            background: black;
+                     }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+
+        }
+
+
+        li a {
+            display: block;
+            color: white;
+            background-color: black;
+            text-align: center;
+            padding: 7px;
+            text-decoration: none;
+           
+        }
+        h1,h2,h4{
+            text-align: center;
+            
+        }
+        
+         div.button{
+            background-color: white;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            padding: 30px;
+            padding-bottom: 40px;
+            cursor: pointer;
+            width: 10%;
+            height: 2px;
+            margin: 10px;;
+            display: flex;
+            justify-content: center;
+           
+        }
+        div.flexbox{
+            justify-content: center;
+        }
+        div.box {
+            background-color: #bc1a1a;
+            color: white;
+            padding: 10px;
+                position: absolute;
+                bottom: 50px;
+                right: 0;
+                display: inline-block;
+        }
+        .logo {
+            color: white;
+            font-size: 17px;
+            padding: 10px;
+        }
+        
+       .item{
+        background-color: orange;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        height: 40px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    
+       }
+       
+       div.grid{
+        justify-content: center;
+        margin: 20px;
+        margin-bottom: 10px;
+       }
+       .position-item.relative{
+        position: relative;
+        background-color: lightblue;
+        border: 1px solid black;
+        margin: 20px;
+        margin-left: 50px;
+        text-align: left;
+       margin-bottom: 0;
+       }
+       .position-item.absolute-parent{
+        display: flex;
+        justify-content: space-between;
+        justify-content: left;
+        gap: 50%;
+        align-items: left;
+        background-color: white;
+       color: black;
+        border: 1px solid black;
+        width: 720%;
+        height: 140px;
+        margin: 20px;
+        padding-left: none;
+        top-margin: 0;
+    
+
+        
+       }
+
+        
+       .position-item.absolute-child{
+        background-color: red;
+        color: white;
+        border: 1px solid black;
+        margin: 6px;
+        width: 130px;
+        height: 10px;
+        text-align:center;
+        justify-content: space-between;
+        top: 125%;
+        padding-top: 6px;
+        margin-right:5% ;
+        margin-top:1px;
+        position: absolute;
+        right:2px ;
+
+       }
+       .position-item.sticky{
+        background-color: purple;
+        color: white;
+        border:black solid 1px;
+        margin: 10px;
+        position: sticky;
+        height: 2px;
+        text-align: left;
+        justify-content: left;
+        justify-items:left;
+         padding:30px;
+         padding-top: 2px;
+       }
+       
+       .position-item.static{
+        background-color: white;
+        text-align: left;
+        border: 1px solid black;
+        position: static;
+       }
+       .position-item.fixed-parent{
+    
+        background-color: black;
+        color: white;
+        height: 10px;
+        bottom: 0;
+       display: flex;
+            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            padding:  15px 20px;
+        
+        
+
+       }
+       .position-item.fixed-child{
+        background-color: green;
+        color: white;
+        position: fixed;
+        gap: 1px;
+       bottom: 0;
+        right: 0;
+        wtidth: 4px;
+        height: 20px;
+       text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        justify-content: center;
+            align-items: center;
+       }
+       
+       
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <nav class="navbar">
+        <div class="logo">My Website</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+       </div>
+       </nav>   
+       </header>  
+       
+
+    <h1>CSS Practice Assignment</h1>
+    <h4>Learn Flexbox,Grid and Positioning</h4>
+    <br>
+    <h2>Flexbox Example</h2>
+    <div class="flexbox">
+        <div class="button">HTML</div>
+        <div class="button">CSS</div>
+        <div class="button">JavaScript</div>
+    </div>
+    <h2>Grid Layout Example</h2>
+    <div class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2> CSS Position Value</h2><br>
+
+
+
+<div class="position">
+        <div class="position-item relative">position: Relative</div>
+    </div>
+    <div class="container">
+    </br>
+    <div class="position">
+        <div class="position-item absolute-parent">
+            Parent box <div class="position-item absolute-child">position: Absolute</div>
+        </div>
+    </div>
+
+    </div>
+    
+        <div class="position-item sticky">position: Sticky</div>
+
+    <div class="position">
+        <div class="position-item static">position: Static(default)</div>
+    </div>
+
+
+    <div class="position">
+        <div class="position-item fixed-parent">
+            Simple CSS Assignment
+            <div class="position-item fixed-child">position: Fixed</div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
